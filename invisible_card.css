@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: 'Source Code Pro', monospace;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
+}
+
+.card-wrapper{
+  height: 600px;
+  width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);
+  transition: box-shadow 1s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-wrapper:hover {
+  box-shadow: 0 0 20px #fff;
+}
+
+.card-wrapper:hover .card {
+  top: 0;
+}
+
+.card {
+  position: absolute;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: linear-gradient(189deg, rgba(255,0,0,0.5) 55%, rgba(0,0,255,0.5) 0%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: top .5s .5s;
+}
+
+.card .heading{
+  font-size: 25px;
+  letter-spacing: 7px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(grey, grey);
+  width: 70%;
+  text-align: center;
+  padding: 5px 0;
+  transform: perspective(1000px) skewX(-20deg) rotateY(30deg);
+}
+
+.card-img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid grey;
+  padding: 3px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+.card .paragraph {
+  font-size: 16px;
+  font-weight: 550;
+  color: #fff;
+  position: relative;
+}
+
+.card .paragraph i{
+  color: silver;
+  position: absolute;
+}
+
+#quote:first-child {
+  top: -5px;
+  left: -22px;
+}
+
+#quote:last-child {
+  right: -22px;
+}
+
+.card-icons {
+  list-style: none;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.card-icon-link {
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: border .4s;
+}
+
+.card-icon {
+  font-size: 25px;
+  color: #fff;
+  transition: color .4s;
+}
+
+.card-icon-link:hover {
+  border: 2px solid #1b5cf5;
+}
+
+.card-icon-link:hover .card-icon {
+  color: #1b5cf5
+}
+
+.card-btn {
+  border: none;
+  outline: none;
+  height: 35px;
+  width: 150px;
+  border-radius: 50px;
+  background: linear-gradient(red 10%, darkblue 90%);
+  text-transform: uppercase;
+  color: #ddd;
+  font-size: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+  cursor: pointer;
+}
